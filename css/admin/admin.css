@@ -1,0 +1,21 @@
+.Contenedor-agregar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-a-mostrar{
+    display: flex;
+    
+}
