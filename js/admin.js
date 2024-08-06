@@ -3,14 +3,15 @@ fetch('checkboxendpoint.php')
 .then(data => {
     document.getElementById('seccion-a-recargar').innerHTML = data;
 });
-
-document.getElementById('boton-recargar').addEventListener('click', function() {
-  fetch('checkboxendpoint.php')
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('seccion-a-recargar').innerHTML = data;
-      });
-});
+function cargar(){
+  document.getElementById('boton-recargar').addEventListener('click', function() {
+    fetch('checkboxendpoint.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('seccion-a-recargar').innerHTML = data;
+        });
+  });
+}
 
 localStorage.setItem('pageTitle', document.title);
 function handleSubmit(event) {

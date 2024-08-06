@@ -24,7 +24,7 @@
       <label for="stock">Stock</label>
         <input name="stock" id="stock" type="number" required>
           <div class="content-buttons">
-            <Button type="submit" id="boton-recargar">Cargar producto</Button>
+            <Button type="submit" id="boton-recargar" onclick="cargar()">Cargar producto</Button>
             <button type="button" onclick="borrar()">Borrar</button>
           </div>
     </form>
