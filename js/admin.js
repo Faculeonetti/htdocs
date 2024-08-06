@@ -3,15 +3,7 @@ fetch('checkboxendpoint.php')
 .then(data => {
     document.getElementById('seccion-a-recargar').innerHTML = data;
 });
-function cargar(){
-  document.getElementById('boton-recargar').addEventListener('click', function() {
-    fetch('checkboxendpoint.php')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('seccion-a-recargar').innerHTML = data;
-        });
-  });
-}
+
 
 localStorage.setItem('pageTitle', document.title);
 function handleSubmit(event) {
@@ -39,10 +31,16 @@ function handleSubmit(event) {
         inputs.forEach(input => {
         input.value = '';
         });
+        fetch('checkboxendpoint.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('seccion-a-recargar').innerHTML = data;
+        });
     })
     .catch(error => {
       console.error('Error:', error);
     });
+
   }
 
   function borrar(){
@@ -64,4 +62,4 @@ function handleSubmit(event) {
   
       // Ejecutar la función inicialmente y luego cada 5 segundos
       actualizarProductos();
-      setInterval(actualizarProductos, 10000);
+      setInterval(actualizarProductos, 5000);
