@@ -41,11 +41,10 @@
                   </tr>
           </thead>
     </table>
-    </div>
+  </div>
   </section>
 </body>
 <script src="../../js/admin.js">
-
 </script>
 </html>
 
