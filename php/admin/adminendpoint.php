@@ -11,8 +11,8 @@ if (!$conn) {
 $data = json_decode(file_get_contents('php://input'), true);
 
 // Preparar la sentencia SQL para insertar los datos (más segura contra inyecciones SQL)
-$stmt = $conn->prepare("INSERT INTO producto (descripcion, precio, stock, estado) VALUES (?, ?, ?, ?)");
-$stmt->bind_param("sidi", $data['nombre'], $data['precio'], $data['stock'], $data['activado']);
+$stmt = $conn->prepare("INSERT INTO producto (descripcion, precio, stock, estado) VALUES (?, ?, ?, 0)");
+$stmt->bind_param("sid", $data['nombre'], $data['precio'], $data['stock']);
 // Ejecutar la sentencia
 if ($stmt->execute()) {
   echo json_encode(['message' => 'Producto cargado correctamente']);

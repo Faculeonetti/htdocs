@@ -23,36 +23,24 @@
         <input name="precio" id="precio" type="number" required>
       <label for="stock">Stock</label>
         <input name="stock" id="stock" type="number" required>
-      <label for="activado">Habilitar</label>
-        <input name="activado" id="activado" type="checkbox" value="1" >
-        <div class="content-buttons">
-          <Button type="submit" >Cargar producto</Button>
-          <button type="button" onclick="borrar()">Borrar</button>
-        </div>
+          <div class="content-buttons">
+            <Button type="submit" id="boton-recargar">Cargar producto</Button>
+            <button type="button" onclick="borrar()">Borrar</button>
+          </div>
     </form>
   </div>
   <section class="info-a-mostrar">
   <div id="productos" class="contenedor-productos">
 
   </div>
-  <div id="checkbox-produtos">
-    <?php
-    include_once('../db/conexion.php');
-    ?>
+  <div id="seccion-a-recargar">
     <table>
           <thead>
                   <tr>
                       <th>ACCION</th>
                   </tr>
           </thead>
-        <?php
-        $consulta= "SELECT codigo, descripcion, precio, stock, estado FROM producto";
-        $producto= $link->query($consulta); 
-        while($row = $producto->fetch_assoc()){
-          echo "<th> <input type="."checkbox"." id=".$row["codigo"]." > </th> <tr>"; 
-        }
-        ?>
-        </table>
+    </table>
     </div>
   </section>
 </body>
