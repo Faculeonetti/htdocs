@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 
     <title>Registro de Usuario</title>
 </head>
+
 <body>
     <h1>Registro</h1>
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         <label for="usuario">Usuario:</label>
-            <input type="text" id="usuario" name="usuario" required>
+        <input type="text" id="usuario" name="usuario" required>
         <br>
-            <label for="contrasena">Contraseña:</label>
-                <input type="password" id="contrasena" name="contrasena" required>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
         <br>
         <input type="submit" value="Registrar">
     </form>
@@ -23,7 +25,7 @@
     // Verificar si el formulario ha sido enviado
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Obtener los datos del formulario
-        $usuario = $_POST['usuario']; 
+        $usuario = $_POST['usuario'];
         $password = $_POST['contrasena'];
         // Hashear la contraseña
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -43,4 +45,5 @@
     }
     ?>
 </body>
+
 </html>
