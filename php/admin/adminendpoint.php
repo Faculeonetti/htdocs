@@ -20,6 +20,5 @@ if ($stmt->execute()) {
   echo json_encode(['error' => 'Error al cargar el producto: ' . $stmt->error]);
 }
 
-// Cerrar la sentencia y la conexión      
 $stmt->close();
 $conn->close();
