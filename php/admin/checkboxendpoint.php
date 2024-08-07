@@ -6,7 +6,9 @@
      <thead>
          <tr>
            <th>ACCION</th>
+           <th>BORRAR</th>
          </tr>
+
      </thead>
     <?php
     $consulta= "SELECT codigo, descripcion, precio, stock, estado FROM producto";
@@ -14,23 +16,44 @@
     while($row = $producto->fetch_assoc()){
 
       if($row["estado"] == 1){
-        echo "<th>  
+        echo "
+                <tr>
+                <th>  
+
         <div class="."checkbox-wrapper-7".">
            <input class='tgl tgl-ios'  id="."cb2-".$row["codigo"]." type="."checkbox"." checked/>
            <label class="."tgl-btn"." for="."cb2-".$row["codigo"].">
          </div>
-        </th> <tr>";
+        </th>";
+              echo "  
+      <th> 
+      <button type="."button".">BORRAR<button>
+      </th>
+              </tr>
+        ";
        }else{
-         echo "<th>  
+         echo "
+                 <tr>
+                 <th> 
+
          <div class="."checkbox-wrapper-7".">
             <input class='tgl tgl-ios'  id="."cb2-".$row["codigo"]." type="."checkbox"." />
             <label class="."tgl-btn"." for="."cb2-".$row["codigo"].">
           </div>
-         </th> <tr>";
+         </th>";
+         echo "  
+         <th> 
+         <button type="."button".">BORRAR<button>
+         </th>
+</tr>
+           ";
+   
        }
+
      }
     ?>
-    </table>
+             </table>
+
   </div>
 
   <style>
@@ -123,5 +146,6 @@
     .checkbox-wrapper-7 .tgl-ios:checked + .tgl-btn:active:after {
       margin-left: -0.8em;
     }
+
  </style>
   

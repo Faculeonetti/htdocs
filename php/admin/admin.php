@@ -34,13 +34,7 @@
 
   </div>
   <div id="seccion-a-recargar">
-    <table>
-          <thead>
-                  <tr>
-                      <th>ACCION</th>
-                  </tr>
-          </thead>
-    </table>
+
   </div>
   </section>
 </body>
