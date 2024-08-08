@@ -1,8 +1,4 @@
-fetch('checkboxendpoint.php')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('seccion-a-recargar').innerHTML = data;
-  });
+
 localStorage.setItem('pageTitle', document.title);
 function handleSubmit(event) {
   event.preventDefault();
@@ -29,11 +25,7 @@ function handleSubmit(event) {
       inputs.forEach(input => {
         input.value = '';
       });
-      fetch('checkboxendpoint.php')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('seccion-a-recargar').innerHTML = data;
-        });
+
     })
     .catch(error => {
       console.error('Error:', error);
@@ -59,9 +51,19 @@ function actualizarProductos() {
   });
 }
 
+function actualizarProductos1() {
+  $.ajax({
+    url: 'checkboxendpoint.php',
+    success: function (data) {
+      $('#seccion-a-recargar').html(data);
+    }
+  });
+}
+actualizarProductos1();
+setInterval(actualizarProductos1, 5000);
 // Ejecutar la función inicialmente y luego cada 5 segundos
 actualizarProductos();
-// setInterval(actualizarProductos, 10000);
+setInterval(actualizarProductos, 5000);
 
 document.addEventListener('change', function (event) {
   if (event.target.type === 'checkbox') {
@@ -113,3 +115,14 @@ function actualizarBaseDatos(numeroProducto, nuevoValor) {
       // Aquí puedes mostrar un mensaje de error al usuario
     });
 }
+
+const tablasConectadas = document.querySelectorAll('.tabla-conectada');
+
+tablasConectadas.forEach(tabla => {
+  tabla.addEventListener('mouseover', () => {
+    tablasConectadas.forEach(tabla => tabla.classList.add('hover'));
+  });
+  tabla.addEventListener('mouseout', () => {
+    tablasConectadas.forEach(tabla => tabla.classList.remove('hover'));
+  });
+});
