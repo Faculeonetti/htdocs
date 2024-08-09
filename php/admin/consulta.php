@@ -2,7 +2,7 @@
 include_once('../db/conexion.php');
 ?>
 
-<table>
+<table class="tabla-conectada">
 
   <thead>
     <tr>
