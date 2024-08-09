@@ -61,7 +61,7 @@ function actualizarProductos() {
 
 // Ejecutar la función inicialmente y luego cada 5 segundos
 actualizarProductos();
-// setInterval(actualizarProductos, 10000);
+setInterval(actualizarProductos, 5000);
 
 document.addEventListener('change', function (event) {
   if (event.target.type === 'checkbox') {
