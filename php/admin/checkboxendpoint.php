@@ -6,7 +6,7 @@
     <thead>
       <tr>
         <th class="x-small">H/D</th>
-        <th>BORRAR</th>
+        <th class="final1">BORRAR</th>
       </tr>
 
     </thead>

@@ -59,11 +59,17 @@ function actualizarProductos1() {
     }
   });
 }
-actualizarProductos1();
-setInterval(actualizarProductos1, 5000);
-// Ejecutar la función inicialmente y luego cada 5 segundos
 actualizarProductos();
+actualizarProductos1();
+/*
+
+setInterval(actualizarProductos1, 5000);
 setInterval(actualizarProductos, 5000);
+
+// Ejecutar la función inicialmente y luego cada 5 segundos
+
+
+*/
 
 document.addEventListener('change', function (event) {
   if (event.target.type === 'checkbox') {

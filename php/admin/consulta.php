@@ -2,11 +2,11 @@
 include_once('../db/conexion.php');
 ?>
 
-<table class="tabla-conectada">
+<table class="tabla-conectada1">
 
   <thead>
     <tr>
-      <th>PRODUCTO</th>
+      <th class="final">PRODUCTO</th>
       <th>PRECIO</th>
       <th>STOCK</th>
       <th>ESTADO</th>
