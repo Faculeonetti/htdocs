@@ -21,7 +21,7 @@ include_once('../db/conexion.php');
       <form action="" method="post" class="forms" onsubmit="handleSubmit(event)">
         <div class="quantity">
           <label class="forms-label" for="nombre">Descripcion</label>
-          <input class="forms-input" name="nombre" id="nombre" type="text" required>
+          <input class="forms-input" name="nombre" id="nombre" type="text" placeholder="Nombre del producto" required>
         </div>
         <div class="inputs-vr">
           <div class="quantity">
