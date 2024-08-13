@@ -26,16 +26,16 @@ include_once('../db/conexion.php');
         <div class="inputs-vr">
           <div class="quantity">
             <label class="forms-label" for="precio">Precio</label>
-            <input class="forms-input" id="precio" type="number" type="number" min="1" value="0" step="1" required>
+            <input class="forms-input" name="precio" type="number" type="number" min="0" value="0" step="1" required>
           </div>
           <div class="quantity">
             <label class="forms-label" for="stock">Stock</label>
-            <input class="forms-input" name="stock" id="stock" value="0" type="number" min="1" step="1" required>
+            <input class="forms-input" name="stock" id="stock" value="0" type="number" min="0" step="1" required>
           </div>
         </div>
         <div class="content-buttons">
-          <Button type="submit" id="boton-recargar">Cargar producto</Button>
-          <button type="button" onclick="borrar()">Borrar</button>
+          <Button class="forms-input-checkbox" type="submit" id="boton-recargar">Cargar producto</Button>
+          <button class="forms-input-checkbox1" type="button" onclick="borrar()">Borrar</button>
         </div>
       </form>
     </div>
